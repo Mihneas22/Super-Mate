@@ -5,7 +5,7 @@ import React from "react"
 import { useState } from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { AdminLayout } from '@/components/AdminLayout'
+import { AdminLayout } from '../../components/AdminLayout'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
@@ -18,7 +18,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
-import { MixedContent } from '@/components/MathRenderer'
+import { MixedContent } from '../../components/MathRenderer'
 import { 
   ArrowLeft, 
   Plus, 
@@ -273,7 +273,6 @@ export default function AdminExerciseForm() {
                           <Button
                             type="button"
                             variant="ghost"
-                            size="icon-sm"
                             onClick={() => removeStep(step.id)}
                             className="text-destructive hover:text-destructive"
                           >

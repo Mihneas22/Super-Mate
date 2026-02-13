@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion'
-import { AppLayout } from '@/components/AppLayout'
+import { AppLayout } from '../components/AppLayout'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 import { Progress } from '@/components/ui/progress'
 import { Badge } from '@/components/ui/badge'
@@ -255,7 +255,7 @@ export default function ProgressPage() {
                         <p className="font-medium text-sm">{area.topic}</p>
                         <p className="text-xs text-muted-foreground">{area.category}</p>
                       </div>
-                      <Badge variant="warning">{area.accuracy}%</Badge>
+                      <Badge variant="default">{area.accuracy}%</Badge>
                     </div>
                   ))}
                 </CardContent>
@@ -284,7 +284,7 @@ export default function ProgressPage() {
                         <p className="font-medium text-sm">{area.topic}</p>
                         <p className="text-xs text-muted-foreground">{area.category}</p>
                       </div>
-                      <Badge variant="success">{area.accuracy}%</Badge>
+                      <Badge variant="secondary">{area.accuracy}%</Badge>
                     </div>
                   ))}
                 </CardContent>

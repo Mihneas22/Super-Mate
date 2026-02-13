@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { AdminLayout } from '@/components/AdminLayout'
+import { AdminLayout } from '../../components/AdminLayout'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
@@ -203,8 +203,8 @@ export default function AdminUsers() {
                             <td className="p-4">
                               <Badge 
                                 variant={
-                                  user.status === 'active' ? 'success' : 
-                                  user.status === 'inactive' ? 'warning' : 
+                                  user.status === 'active' ? 'default' : 
+                                  user.status === 'inactive' ? 'secondary' : 
                                   'destructive'
                                 }
                                 className="text-xs"
@@ -237,7 +237,7 @@ export default function AdminUsers() {
                             <td className="p-4">
                               <DropdownMenu>
                                 <DropdownMenuTrigger asChild>
-                                  <Button variant="ghost" size="icon-sm">
+                                  <Button variant="ghost" size="icon">
                                     <MoreVertical className="size-4" />
                                   </Button>
                                 </DropdownMenuTrigger>

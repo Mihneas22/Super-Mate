@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Progress } from '@/components/ui/progress'
 import { Badge } from '@/components/ui/badge'
-import { MixedContent } from '@/components/MathRenderer'
+import { MixedContent } from '../components/MathRenderer'
 import { 
   ArrowLeft, 
   CheckCircle2, 
@@ -159,7 +159,7 @@ export default function WorkspacePage() {
                 {completedSteps}/{mockExercise.steps.length}
               </span>
             </div>
-            <Badge variant={mockExercise.difficulty === 'usor' ? 'success' : mockExercise.difficulty === 'mediu' ? 'warning' : 'destructive'}>
+            <Badge variant={mockExercise.difficulty === 'usor' ? 'default' : mockExercise.difficulty === 'mediu' ? 'secondary' : 'destructive'}>
               {mockExercise.difficulty === 'usor' ? 'Usor' : mockExercise.difficulty === 'mediu' ? 'Mediu' : 'Greu'}
             </Badge>
           </div>

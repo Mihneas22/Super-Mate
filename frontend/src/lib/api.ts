@@ -1,7 +1,7 @@
 // API Service - All communication with backend
 // Replace BASE_URL with your actual backend URL
 
-const BASE_URL = import.meta.env.VITE_API_URL || '/api'
+const BASE_URL = '/api'
 
 interface ApiOptions {
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH'

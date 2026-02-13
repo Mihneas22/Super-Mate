@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { AdminLayout } from '@/components/AdminLayout'
+import { AdminLayout } from '../../components/AdminLayout'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
@@ -240,8 +240,8 @@ export default function AdminExercises() {
                           <td className="p-4">
                             <Badge 
                               variant={
-                                exercise.difficulty === 'usor' ? 'success' : 
-                                exercise.difficulty === 'mediu' ? 'warning' : 
+                                exercise.difficulty === 'usor' ? 'default' : 
+                                exercise.difficulty === 'mediu' ? 'secondary' : 
                                 'destructive'
                               }
                               className="text-xs"
@@ -262,19 +262,19 @@ export default function AdminExercises() {
                           </td>
                           <td className="p-4">
                             <div className="flex items-center justify-end gap-1">
-                              <Button variant="ghost" size="icon-sm" asChild>
+                              <Button variant="ghost" size="icon" asChild>
                                 <Link to={`/exercise/${exercise.id}`}>
                                   <Eye className="size-4" />
                                 </Link>
                               </Button>
-                              <Button variant="ghost" size="icon-sm" asChild>
+                              <Button variant="ghost" size="icon" asChild>
                                 <Link to={`/admin/exercises/${exercise.id}`}>
                                   <Edit className="size-4" />
                                 </Link>
                               </Button>
                               <Button 
                                 variant="ghost" 
-                                size="icon-sm"
+                                size="icon"
                                 onClick={() => handleDelete(exercise.id)}
                                 className="text-destructive hover:text-destructive"
                               >

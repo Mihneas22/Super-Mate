@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { AppLayout } from '@/components/AppLayout'
+import { AppLayout } from '../components/AppLayout'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -129,11 +129,7 @@ const mockExercises = [
   },
 ]
 
-const difficultyColors = {
-  usor: 'success',
-  mediu: 'warning',
-  greu: 'destructive',
-} as const
+
 
 const difficultyLabels = {
   usor: 'Usor',
@@ -260,7 +256,7 @@ export default function ExerciseListPage() {
           <motion.div variants={fadeInUp} className="space-y-3">
             {filteredExercises.map((exercise) => {
               const StatusIcon = statusIcons[exercise.status as keyof typeof statusIcons]
-              const difficultyColor = difficultyColors[exercise.difficulty as keyof typeof difficultyColors]
+              
               
               return (
                 <motion.div key={exercise.id} variants={fadeInUp}>
@@ -273,7 +269,7 @@ export default function ExerciseListPage() {
                               <Badge variant="secondary" className="text-xs">
                                 {exercise.categoryLabel}
                               </Badge>
-                              <Badge variant={difficultyColor} className="text-xs">
+                              <Badge className="text-xs">
                                 {difficultyLabels[exercise.difficulty as keyof typeof difficultyLabels]}
                               </Badge>
                               <Badge variant="outline" className="text-xs">

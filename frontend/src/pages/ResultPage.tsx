@@ -5,7 +5,6 @@ import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { Progress } from '@/components/ui/progress'
 import { 
   CheckCircle2, 
   XCircle, 
@@ -204,7 +203,7 @@ export default function ResultPage() {
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-2 mb-2 flex-wrap">
                           <span className="font-medium">Pasul {index + 1}</span>
-                          <Badge variant={step.isCorrect ? 'success' : 'destructive'} className="text-xs">
+                          <Badge variant={step.isCorrect ? 'default' : 'destructive'} className={`text-xs ${step.isCorrect ? 'bg-success text-success-foreground' : ''}`}>
                             {step.isCorrect ? 'Corect' : 'Incorect'}
                           </Badge>
                           {step.attempts > 1 && (

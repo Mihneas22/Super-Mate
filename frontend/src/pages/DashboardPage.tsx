@@ -2,12 +2,12 @@
 
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { AppLayout } from '@/components/AppLayout'
+import { AppLayout } from '../components/AppLayout'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
-import { Progress } from '@/components/ui/progress'
-import { Badge } from '@/components/ui/badge'
-import { useAuth } from '@/context/AuthContext'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../components/ui/card'
+import { Progress } from '../components/ui/progress'
+import { Badge } from '../components/ui/badge'
+import { useAuth } from '../context/AuthContext'
 import { 
   Play, 
   Plus, 
